@@ -125,6 +125,8 @@ void BaseSymbolic::fit(std::vector<std::vector<double>>X, std::vector<double>y, 
     if (n_components_ > hall_of_fame_ || n_components_ < 1) printf("n_components must be less than or equal to hall_of_fame.\n");
 
     _function_set.clear();
+    for (auto &i : function_set) {
+    }
 
 
 }
