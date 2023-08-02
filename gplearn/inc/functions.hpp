@@ -23,10 +23,10 @@ double _protected_log(double x1);
 double _protected_inverse(double x1);
 double _sigmoid(double x1);
 
-double add(double x, double y);
-double sub(double x, double y);
-double mul(double x, double y);
-double div(double x, double y);
+double add(double *par);
+double sub(double *par);
+double mul(double *par);
+double div(double *par);
 
 auto add2 = _Function(add, "add", 2);
 auto sub2 = _Function(sub, "sub", 2);

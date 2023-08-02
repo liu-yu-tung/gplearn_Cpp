@@ -23,17 +23,17 @@ double _sigmoid(double x1) {
     return 1 / (1 + std::exp(-x1));
 }
 
-double add(double x, double y) {
-    return x+y;
+double add(double *par) {
+    return par[0] + par[1];
 }
-double sub(double x, double y) {
-    return x-y;
+double sub(double *par) {
+    return par[0] - par[1];
 }
-double mul(double x, double y) {
-    return x*y;
-} 
-double div(double x, double y) {
-    return x/y;
+double sub(double *par) {
+    return par[0] * par[1];
+}
+double div(double *par) {
+    return par[0] / par[1];
 }
 
 
