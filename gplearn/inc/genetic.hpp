@@ -47,7 +47,8 @@ public:
     std::pair<int, int> init_depth;
     std::string init_method;
     std::set<std::string> function_set;
-    std::set<std::string> _function_set;
+    std::map<std::string, _Function> _function_set;
+    std::map<int, std::vector<_Function>> _arities;
     std::string transformer;
     std::string metric;
     double parsimony_coefficient; 

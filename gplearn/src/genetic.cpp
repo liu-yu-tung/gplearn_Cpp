@@ -125,8 +125,16 @@ void BaseSymbolic::fit(std::vector<std::vector<double>>X, std::vector<double>y, 
     if (n_components_ > hall_of_fame_ || n_components_ < 1) printf("n_components must be less than or equal to hall_of_fame.\n");
 
     _function_set.clear();
-    for (auto &i : function_set) {
+    for (auto &function : function_set) {
+        _function_set.insert(_function_map[function]);
     }
+
+    _arities.clear();
+    for (auto &function : _function_set) {
+        int arity = function.arity;
+        _arities[arity].insert(function);
+    }
+
 
 
 }
