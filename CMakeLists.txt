@@ -9,6 +9,7 @@ set(CMAKE_CXX_STANDARD 20)
 # Add an executable target
 add_executable(main 
     src/gplearn/functions.cpp
+    src/gplearn/fitness.cpp
     src/gplearn/genetic.cpp    
     src/sklearn/base.cpp
     src/main.cpp

@@ -2,6 +2,7 @@
 
 #include "base.hpp"
 #include "functions.hpp"
+#include "fitness.hpp"
 #include <string>
 #include <set>
 #include <vector>

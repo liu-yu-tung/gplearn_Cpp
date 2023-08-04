@@ -134,6 +134,9 @@ void BaseSymbolic::fit(std::vector<std::vector<double>>X, std::vector<double>y, 
         int arity = function.second.arity;
         _arities[arity].push_back(function.second);
     }
+    
+        
+
 
 
 
