@@ -54,6 +54,8 @@ public:
     std::map<int, std::vector<_Function>> _arities;
     std::string transformer;
     std::string metric;
+    _Fitness _metric;
+    std::vector<double>_method_probs;
     double parsimony_coefficient; 
     double p_crossover;
     double p_subtree_mutation;

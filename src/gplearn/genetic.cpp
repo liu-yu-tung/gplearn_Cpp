@@ -134,8 +134,10 @@ void BaseSymbolic::fit(std::vector<std::vector<double>>X, std::vector<double>y, 
         int arity = function.second.arity;
         _arities[arity].push_back(function.second);
     }
+
+    _metric = _fitness_map[metric];
     
-        
+    _method_probs = {p_crossover, p_subtree_mutation, p_hoist_mutation, p_point_mutation};        
 
 
 
