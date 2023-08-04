@@ -129,13 +129,11 @@ void BaseSymbolic::fit(std::vector<std::vector<double>>X, std::vector<double>y, 
         _function_set.insert({function, _function_map[function]});
     }
 
-    /*
     _arities.clear();
-    for (auto &function : _function_set) {
-        int arity = function.arity;
-        _arities[arity].insert(function.second);
+    for (auto function : _function_set) {
+        int arity = function.second.arity;
+        _arities[arity].push_back(function.second);
     }
-    */
 
 
 
