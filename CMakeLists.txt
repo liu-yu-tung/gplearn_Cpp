@@ -11,6 +11,8 @@ add_executable(main
     src/gplearn/functions.cpp
     src/gplearn/fitness.cpp
     src/gplearn/genetic.cpp    
+    src/gplearn/_program_node.cpp    
+    src/gplearn/_program.cpp    
     src/sklearn/base.cpp
     src/main.cpp
 )
