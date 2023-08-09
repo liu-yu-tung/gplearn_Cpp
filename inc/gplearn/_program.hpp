@@ -26,6 +26,9 @@ public:
         std::vector<_ProgramNode> program_
         );
     std::vector<_ProgramNode> build_program(std::mt19937& random_state);
+    int _depth();
+    int _length();
+
 
     std::vector<_Function> function_set;
     std::map<int, std::vector<_Function>> arities;

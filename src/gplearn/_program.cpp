@@ -97,3 +97,24 @@ std::vector<_ProgramNode> _Program::build_program(std::mt19937& random_state ) {
     return newProgram;
 
 }
+int _Program::_depth() {
+    std::vector<int> terminals = {0};
+    int depth = 1;
+    for (auto node : program) {
+        if (node.type == "function") {
+            terminals.push_back(node.arity);
+            depth = terminals.size()>depth?terminals.size():depth; 
+        }
+        else {
+            terminals.back() -= 1;
+            while (terminals.back() == 0) {
+                terminals.pop_back();
+                terminals.back() -= 1;
+            }
+        }
+    } 
+    return depth;
+}
+int _Program::_length() {
+    return program.size();
+}
