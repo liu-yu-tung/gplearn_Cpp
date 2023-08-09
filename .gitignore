@@ -1,4 +1,6 @@
 build/*
 *.swp
 *.out
-
+test.py
+test.cpp
+test.hpp
