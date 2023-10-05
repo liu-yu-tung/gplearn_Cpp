@@ -97,6 +97,7 @@ std::vector<_ProgramNode> _Program::build_program(std::mt19937& random_state ) {
     return newProgram;
 
 }
+
 int _Program::_depth() {
     std::vector<int> terminals = {0};
     int depth = 1;
@@ -115,6 +116,24 @@ int _Program::_depth() {
     } 
     return depth;
 }
+
 int _Program::_length() {
     return program.size();
+}
+
+std::vector<double> _Program::execute(std::vector<std::vector<double>> X) {
+    _ProgramNode node = program[0];
+    if (node.type == "constant") {
+        std::vector<double> result(X.size(), node.constant);
+        return result;
+    }
+    else if (node.type == "variable") {
+        std::vector<double> result(X.size());
+        for (int i=0; i<X.size(); i++) {
+            result[i] = X[i][node.variable];
+        }
+        return result;
+    }
+    std::vector<double> r;
+    return r;
 }

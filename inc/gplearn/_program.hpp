@@ -28,6 +28,7 @@ public:
     std::vector<_ProgramNode> build_program(std::mt19937& random_state);
     int _depth();
     int _length();
+    std::vector<double>execute(std::vector<std::vector<double>> X);
 
 
     std::vector<_Function> function_set;
