@@ -4,3 +4,4 @@ build/*
 test.py
 test.cpp
 test.hpp
+out/*
